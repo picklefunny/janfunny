@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jan</title>
+</head>
+<body>
+
+<button id="clickBtn" onclick="goFullscreen()">Enter my fun zone :))</button>
+
+  <p>Try https://picklefunny.github.io/janfunny/aggressive :))</p>
+  
+<div id="tiles" style="display:none; background-image:url('janhuge.gif'); background-repeat:repeat; position:fixed; top:0; left:0; width:100%; height:100%; margin:0;">
+  <img src="triple.gif" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);">
+</div>
+
+<audio id="janSound" src="jansnewsong.mp3" loop></audio>
+
+<script>
+  function goFullscreen() {
+    document.documentElement.requestFullscreen().catch(() => {});
+    document.getElementById('clickBtn').style.display = 'none';
+    document.getElementById('tiles').style.display = 'block';
+    document.getElementById('janSound').play();
+  }
+
+  window.addEventListener('beforeunload', (e) => {
+    e.preventDefault();
+    e.returnValue = '';
+  });
+</script>
+
+</body>
+</html>
